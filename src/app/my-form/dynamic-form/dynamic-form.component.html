@@ -1,0 +1,10 @@
+<div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      @for (question of questions?.value; track question) {
+        <div class="form-row">
+          <app-form-field [question]="question"></app-form-field>
+        </div>
+      }
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>

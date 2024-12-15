@@ -1,0 +1,22 @@
+
+<div [formGroup]="question.formGroup" class="field" [ngClass]="'level-' + question.level">
+    <div class="question" *ngIf="question.type !== 'group'">
+        <label for="name">{{question.key}}</label>
+        <input *ngIf="question.type === 'input'" [id]="question.key" type="text" [formControlName]="question.key">
+        <input *ngIf="question.type === 'checkbox'" [id]="question.key" type="checkbox" [formControlName]="question.key">
+        <select *ngIf="question.type === 'select'" [id]="question.key" [formControlName]="question.key">
+            <option value="" disabled selected>-- Select an option --</option>
+            <option *ngFor="let option of question.options" [value]="option">{{ option }}</option>
+        </select>
+    </div>
+    <div class="section" *ngIf="question.type === 'group'" [formGroupName]="question.key">
+        <h1 *ngIf="question.level == 1">{{question.isArray ? toInt(question.key) + 1: question.key}} </h1>
+        <h2 *ngIf="question.level == 2">{{question.isArray ? toInt(question.key) + 1: question.key}} </h2>
+        <h3 *ngIf="question.level == 3">{{question.isArray ? toInt(question.key) + 1: question.key}} </h3>
+        <h4 *ngIf="question.level == 4">{{question.isArray ? toInt(question.key) + 1: question.key}} </h4>
+        <h5 *ngIf="question.level == 5">{{question.isArray ? toInt(question.key) + 1: question.key}} </h5>
+        <div class="secion-body">
+            <app-form-field *ngFor="let question of question.value" [question]="question"></app-form-field>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,125 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .question {
+    margin-bottom: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  h1, h2, h3, h4, h5 {
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: #333;
+  }
+  h1 {
+   font-size: 1.75em;
+  }
+  h2 {
+    margin-left: 1em;
+    font-size: 1.5em; 
+   }
+   h3 {
+    margin-left: 2em;
+    font-size: 1.25em;
+   }
+   h4 {
+    margin-left: 3em;
+    font-size: 1.125em;  
+   }
+   h5 {
+    margin-left: 4em;
+    font-size: 1em; 
+   }    
+  .section, .secion-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .section {
+    margin-bottom: 10px;
+  }
+
+  .section > label {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .secion-body {
+    flex-wrap: wrap;
+  }
+
+  label {
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    color: #2c3e50;
+    width: 25%;
+    box-sizing: border-box;
+    margin-right: 10px;
+    text-align: right;
+  }
+
+  .question > input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+  }
+  
+  select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+
+/* For small screens (mobile) */
+@media (max-width: 600px) {
+    div {
+      flex-direction: column; 
+      align-items: flex-start;
+    }
+  
+    label {
+      width: 100%;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+  
+    input {
+      width: 100%;
+    }
+    h1, h2, h3, h4, h5 {
+      margin-left: 0;
+    }
+}
+  
+  
